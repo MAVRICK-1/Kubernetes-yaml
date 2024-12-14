@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    env: "navamita"
+  name: nginx-pods
+spec:
+  containers:
+  - image: nginx:latest
+    name: nginx-pods
+    ports:
+      - containerPort: 80

@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: ns-service
+  name: ns-service
+spec:
+  ports:
+  - name: 30001-80
+    port: 30001
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: ns-service
+  type: NodePort
+status:
+  loadBalancer: {}

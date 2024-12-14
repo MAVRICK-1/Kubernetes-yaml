@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    env: demo
+spec:
+  template:
+    metadata:
+      name: nginx
+      labels:
+        env: demo
+    spec:
+      containers:
+        - image: nginx:latest
+          name: navamita
+  replicas: 3
+  selector:
+    matchLabels:
+      env: demo
+

@@ -1,0 +1,21 @@
+apiVersion : apps/v1  #because it is inside Apps group
+kind: ReplicaSet
+metadata:
+  name: nginx-rc
+  labels:
+    env: navamita
+spec:
+  template:
+    metadata:         # Its for pod
+      labels:
+        name: nginx-rx
+        env: navarishi
+    spec:
+      containers:
+        - image: nginx:latest
+          name: nginx
+  replicas: 3
+  selector:  
+    matchLabels:
+      env: navarishi
+
