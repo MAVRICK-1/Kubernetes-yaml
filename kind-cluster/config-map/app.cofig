@@ -1,0 +1,8 @@
+apiVersion: v1
+data:
+  first: rishi
+  lost: navamita
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: app-cm
